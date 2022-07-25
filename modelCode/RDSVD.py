@@ -1,7 +1,7 @@
 import ipdb
 import torch
 
-def geometric_approximation_1(s):  # [25]
+def geometric_approximation_1(s):  
     ba, chan = s.shape
     dtype = s.dtype
 
@@ -14,7 +14,7 @@ def geometric_approximation_1(s):  # [25]
     p = torch.where(p < 1., p, 1. / p) 
 
     a1 = s.unsqueeze(-1).repeat(1, 1, chan).permute(0, 2,1)
-    # a1 = s.repeat(s.shape[0], 1).t()#[25,25]
+    # a1 = s.repeat(s.shape[0], 1).t()
     a1_t = a1.permute(0, 2,1)
     lamiPluslamj = 1. / ((s.unsqueeze(-1) + s.unsqueeze(-2)))  # do not need to sub I,because have been * a1
 

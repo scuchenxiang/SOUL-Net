@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--epochs", type=int, default=300, help="number of epochs of training")
 parser.add_argument("--batch_size", type=int, default=1, help="size of the batches")
 parser.add_argument("--lr", type=float, default=1e-4, help="adam: learning rate")
-parser.add_argument("--num_block", type=int, default=2)
+parser.add_argument("--num_block", type=int, default=10)
 parser.add_argument("--model_save_path", type=str, default="saved_models/1st")
 parser.add_argument("--data_path", type=str, default="../../genedatas/ctlib_64_1024_72_58_98178_3.5_3/")#datas
 parser.add_argument("--models_path", type=str, default="models/")
